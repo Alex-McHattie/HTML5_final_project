@@ -1,0 +1,495 @@
+/* ALEX used Ex 6-2 as scaffolding, and appropriated and adapted bits and pieces into it from the book */
+
+/*  ALEX notes that this does change things, so I will experiment with it to see if it's helpful or not. */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* per Part 1 #9, I've got more than 5 new rulesets and 10 new rules total */
+
+/* this just made good sense to stick this in here */
+html {
+	background-color: white;
+}
+
+body {
+	/* I adapted a lot of this from Ex 6-2 */
+	/* Alex also looked at possible 
+	font-family variations, esp. p. 146 ff.
+	Murach's suggests avoiding cursive and fantasy fonts-- dang! '*/
+	font-family: Arial, Helvetica, sans-serif;
+	
+	/* per Part 3 #9 font size set to 100 percent */
+    font-size: 100%;
+    /* width: 800px; */
+	/* THIS IS FOR RWD */
+	width: 99%;
+	max-width: 960px;
+	/* per Part 3 #11 setting
+	margins with relative units.
+	Zero definitly looks best here
+	for top and bottom.  Also,
+	auto definitley looks best
+	here for the sides. */
+    margin: 0 auto;
+    border: 3px solid #931420;
+/* per Part 3 #12, a differing 
+	background color.  This is
+	RGB */
+    background-color: #ffeeff;	
+}
+
+
+a:link { color: blue; }
+a:visited { color: purple; }
+a:hover, a:focus { color: green;
+font-style: italic}
+
+
+/* THIS DOESN'T HELP THE NAV MENU
+a:hover, a:focus {
+	font-style: italic;
+}
+*/
+
+/* header style rules */
+/* adapted from Ex 6-2 */
+/* Part 1 #8a -differentiate hader from main */
+header {
+	padding: 1.5em 0 2em 0;
+	border-bottom: 3px solid #931420;
+		background-image: -moz-linear-gradient(
+	    45deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, blue 100%);
+	background-image: -webkit-linear-gradient(
+	    45deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, blue 100%);
+	background-image: -o-linear-gradient(
+	    45deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, blue 100%);
+	background-image: linear-gradient(
+	    45deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, blue 100%);	
+}
+header h2 {
+	text-align: center;
+	/* per Part 3 #10 and p146,
+	percents and ems are 
+	relative font sizes 
+	This is one different
+	font size... */
+	font-size: 230%;
+	font-weight: bold;
+	font-variant: small-caps;
+	color: #800000;
+}
+header h3{
+	text-align: center;
+	/* ...and here as a 
+	second different font size */
+	font-size: 130%;
+	font-weight: 500;
+	font-style: italic;
+	color: #800080;
+}
+header img {
+	float: left;
+	/* padding: 0 30px; */
+	/* RWD conversion  30 / 800 x 100 */
+	padding: 0 3.75%; 
+}
+
+/* Part 2 #9, nav element, which I appropriated from Ex 7 */
+#nav_menu ul {
+	list-style-type: none;
+	/* margins for nav bar flush with body border. */
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#nav_menu ul li {
+	float: left;
+	/* RWD addition */
+	width: 20%;
+}
+
+/* the color here overrides 
+the color in the focus and 
+hover style rule, but there is 
+nothing here to override the italic font style property in
+the focus and hover style rule */
+#nav_menu ul li a {
+    display: block;
+    /* width: 160px; */ /* nixed for RWD */
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: #800000;
+    color: white; 
+    font-weight: bold;
+}
+/* ALEX stuck this in
+(from Town Hall 1 
+exercises) for
+Module 3 Project */
+#nav_menu a.current {
+	color: yellow;
+}
+#nav_menu a.millions {
+	color: gold;
+}
+#nav_menu ul ul {
+	width: 100%; /* ADDED FOR RWD */
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+#nav_menu ul ul li {
+	float: none;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+/* main content style rules */
+/* adapted from Ex 6-2 */
+/* it's explained on p. 155--I might want this... */
+main { clear: left; }
+
+/* these main rules can be reassigned like they were in Ex 6-2 (i.e., section and aside) */
+
+/* THIS SECTION style rule added from EX 8 for RWD */
+
+/* THIS MAY MESS THINGS UP   MAYBE ITS BETTER TO CALL IT MAIN 
+OR LEAVE IT OUT */
+section {
+	width: 65.625%;	/* 525 / 800 x 100 */
+	float: right;
+	padding: 0 2.5% 20px 2.5%;
+}
+
+
+/* yes. Since there is a section, article and aside,
+I'm doing that based on Ex 7. '*/
+section h1 {  
+	text-align: center;
+	color: #000080;
+	font-size: 350%;
+	font-weight: bold;
+	padding: .5em 0 .25em 0;
+	margin: 0;               
+	/* If you remove this, the 
+	margins in normalize.css will be 
+	applied. 
+	Says Murach.  
+	Alex is not messing with 
+	this... */
+}
+main h2 {   
+	color: #800000;
+	font-size: 130%;
+	font-weight: 700;
+	padding: .5em 0 .25em 0;
+	/* ALEX added this,
+	but may change. Not pretty with lists. */
+	margin-left: 1em;
+}
+
+/* I have  two of these h3s accompaning images  */
+main h3 {   
+	color: #800000;
+	font-size: 130%;
+	font-weight: 200;
+	padding: .5em 0 .25em 0;
+	/* ALEX added this,
+	currently works with h3s
+	without img padding 
+	next to them. */
+	margin: 1em;
+}
+/* shadow for one of the main h3 elements hmm- the whole text in here ends up the same color */
+.shadow {
+	text-shadow: 9px 9px 9px #00ff00;
+}
+
+/* ALEX trying shorthand font property from p. 149 */
+article h4 { 
+	font:90%/120% "Comic Sans MS", Impact, sans-serif;
+	color: green;
+	font-weight:700;
+	margin: 1em
+	/*
+	color: #800000;
+	font-size: 130%;
+	font-weight: 20;
+	padding: .5em 0 .25em 0;
+	*/
+}
+
+/* mixing things up a bit, per Part 1 #8b */
+article h5 {   
+	color: #800000;
+	font-size: 130%;
+	font-weight: lighter;
+	padding: .5em 0 .25em 1em;
+	text-align: center;
+	text-shadow: 3px 3px 3px yellow;
+}
+article h6 {   
+	color: #8000ff;
+	font-size: 130%;
+	font-weight: bold;
+	padding: .5em 0 .25em 0;
+	margin: 1em;
+}
+article blockquote {	
+	padding: 0 2em;
+	font-style: italic;
+}
+/* WED AUG 5
+ALEX inserting this
+TOOLTIP style rule
+appropriated from
+W3 suggeste by Eric */
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 150px;
+	background-color: black;
+	color: #aaffaa;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+	
+	/* positioning the tooltip */
+	position: absolute;
+	z-index: 1;
+	left: -1px;
+	top: 105%
+	/* BEST SO FAR */
+}
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+section ul {	
+	line-height: 1.5;
+	padding: 0 0 .25em 1.25em;
+	margin: 0 1em;
+}
+/* Alex put in same declarations
+in ol used for ul so they match
+style wise */
+section ol {	
+	line-height: 1.5;
+	padding: 0 0 .25em 1.25em;
+	margin: 0 1em;
+}
+
+/* some modifications per p. 161, f.i., add font-size */
+section li {
+	font-size: 99%;
+	padding-bottom: .35em;
+}
+
+/* 
+NOTES FOR PRE-FIGCAPTION VERSION of section img
+1 MAX WIDTH ADDED FOR RWD ooh this really messes things up.
+2 per Part 3 #11, this margin
+	setting for all the pictures in 
+	main (section) looks pretty good
+*/
+/* PRE-FIGCAPTION VERSION OF section img */
+
+
+/*  ALEX KEEPS THIS for
+the rest of the pictures
+below the article image */
+
+section img {
+	float: left;
+	
+	/* max-width: 40%; */ /* THIS MESSES UP FIGCAPS */
+	
+	margin: 1em 1em 1em 1em;
+	border: 1px solid black;
+}
+/* OK I'M TRYING FIGCAPTION
+WITH A SECTION PICTURE...
+AND IT'S THE SAME PROBLEM
+IF NOT WORSE */
+section figure {
+	/*float: left;
+	margin: 1em 1em 1em 1em;	*/
+	float: right;
+	margin: .5em 0 1em 1em;
+}
+section figcaption {
+	display: block;
+	font-weight: bold;
+	padding-top: .5em;
+	border-bottom: 1px solid black;
+	/* text-underline-position: below; *//* NONE OF THESE OPTIONS MOVE THE TEXT */
+}
+
+/* ALEX TRIES CH 11 
+SPEAKERS CSS ARTICLE
+CODE TO RECTIFY TEXT 
+AND CAPTION ALIGNMENTS 
+WTIH WARHOL IMAGE */
+article {
+	padding: .5em 0;
+}
+article h3 {
+	font-size: 115%;
+	padding: 0 0 .25em 0;
+}
+
+/* FIGCAPTION VERSION OF section img  
+APPROPRAITED FROM EX 11 */
+article img {
+	
+	/* max-width: 40%; */  /* XXXXX  TEMP PARK DOESN'T CHANGE ANYTHING  XXXXX */
+	 max-width: 99%; 
+	border: 1px solid black;
+}
+
+
+/* I TAKE THE WORD ARTICLE OFF...
+ZERO DIFFERENCE */
+ article figure {
+	/*float: left;
+	margin: 1em 1em 1em 1em;	*/
+	float: right;
+	margin: .5em 0 1em 1em;
+}
+article figcaption {
+	display: block;
+	font-weight: bold;
+	padding-top: .5em;
+	border-bottom: 1px solid black;
+	/* text-underline-position: below; *//* NONE OF THESE OPTIONS MOVE THE TEXT */
+}
+/* ALL THESE SAID SECTION IN MY PROJECT 
+PUT IT
+BACK THAT WAY */
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+section p {
+	margin: 1em;
+}
+
+section p:first-letter {font-weight: bold; }
+section p:first-letter {font-size: 150%; }
+
+/* Alex is appropriating
+these aside rules from 
+Ex 7 */
+aside {
+	/* width: 215px; */ /* changed for RWD */
+	width: 26.875%;
+	float: right;
+	/* padding: 0 0 20px 20px; */
+	padding: 0 0 20px 2.5%;
+}
+aside h2 {
+	color: #800000;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+	margin: 0;
+}
+
+aside h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+	margin: 0;
+}
+aside img {
+	padding-bottom: 1em;
+}
+
+
+/* footer style rules */
+footer {
+	/* per Part 3 #11 differing 
+	background color for a third
+	element */
+	background-color: #aaffaa;
+	clear: both;
+}
+footer p {
+	font-weight: bold;
+	text-align: center;
+	color: darkred;
+	padding: 1em;
+}
+
+/* woo-hoo!--
+up to Part 1 #9, W3CSS validator likes my code (except for browser prefixes, which it never liked and are Murach's anyway... 
+
+--AND--
+
+NO errors per Lint-- only 14 warnings for the usual Murach type stuff */
+
+/* NOW HERE COMES THE MOBILE MENU FROM EX 8 FOR 
+MY MODULE 3 PROJECT EMBELLISHMENTS */
+#mobile_menu {
+	display: none;
+}
+
+/* tablet portrait to standard 960 */
+@media only screen and (max-width: 959px) {
+	section h1 { font-size: 135%; }
+	section h2, aside h2 { font-size: 120%; }
+}
+
+/* mobile landscape to tablet portrait */
+@media only screen and (max-width: 767px) {
+	header img { float: none; }
+	header { text-align: center; }
+	section {
+		float: none;
+		width: 95%;                     /* 100 - (2 x 2.5) for padding */
+	}
+	aside {
+		float: none;
+		padding-right: 2.5%;           /* 20 / 800 x 100 */
+		width: 95%;                    /* 100 - (2 x 2.5) for padding */
+	}
+	/* article img { max-width: 30%; } */ /* xxxxxxxxx  PARK xxxxxx*/
+	
+	article img { max-width: 80%; }  /* TRY THIS */
+	section img { max-width: 80%; }
+	#speakers {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+	#nav_menu {
+		display: none;
+	}
+	#mobile_menu {
+		display: block;
+	}
+	.slicknav_menu {
+		background-color: #800000 !important;
+	}
+}
+
+/* mobile portrait to mobile landscape */
+@media only screen and (max-width: 479px) {
+	body { font-size: 90%; }
+}
+
+
+/* comment */
+/* comment */
+/* comment */
+/* comment */
+/* comment */
+/* comment */

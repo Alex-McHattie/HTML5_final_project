@@ -1,0 +1,606 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- per Part 2 #3 edited meta tag -->
+<!--
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+   -->
+   <meta charset="utf-8">
+    
+ <!-- ALEX NOTE for MODULE 3 PROJECT
+   ALEX ATTEMPST TO MAKE THIS 
+   WEBSITE RESPONSIVE AS DONE
+   IN EXERCISE 8 -->
+   
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- continuing AFTER favicon -->
+    
+    <!-- per Part 3 #4 AND  #5 add normalize css -->
+    <!-- ALEX NOTE I could not download this 
+    file so I copied it off the github website
+    specified in the instructions for this
+    assigment.  This is not the normalize
+    file from the book.  This is the github 801 version on the link in the instructions. -->
+    
+    <!-- ALEX PARKED THIS ONE FOR A SEC BECAUSE
+    IT MAYBE MESSING UP FIGCAPTION -->
+    
+    <link rel="stylesheet" href="css/github801normalize.css">
+    
+    
+    <!-- MURACHS NORMALIZE CSS DID NOT MAKE ANY DIFFERENCE -->
+    <!--
+    <link rel="stylesheet" href="css/normalize.css">
+    -->
+    
+    <!-- Part 3 #1,2 and 3... I'm pretty sure this is 
+    root level, per p. 107, and pp. 124 and 125-->
+    <!-- per Part 3 #6, I moved this css file under 
+    the 801 normalize css I installed from the github 
+    download. -->
+    <link rel="stylesheet" href="css/site.css">
+    
+    <!-- Part 2, #1 title tag SEO, pp. 86-7 -->
+	<title>ALEX CIS152 Mod3 Project | bio and curios</title>
+	
+		<!-- ALEX NOTE on 
+		FAVICON (Part 2 
+		#2)...GRRR! 
+	I tried every
+	way in the book (pp. 
+	414-5) and per Eric's 
+	instructions to make a 
+	FAVICON, AND every 
+	other 
+	way I could think of, 
+	including attempting to 
+	COMMANDEER the Murach 
+	ico file and re do it, 
+	but...
+	my Mac REFUSES to make 
+	an ico OR 
+	EVEN a mac version 
+	(ICNS), Infran View 
+	doesn't do 
+	anything, and FavIcon 
+	from Pics doesn't offer a 
+	conversion to ico... 
+	despite Murach's 
+	suggestion... 
+	in fact, NONE of the 
+	quote FREE unquote 
+	options 
+	work!!! 
+	
+	I got images in the 
+	file, I can easily crop 
+	them 
+	to 16x16 pixels no 
+	problem, but I cannot 
+	make it 
+	take an ICO or even an 
+	ICNS extension. -->
+	
+	
+	<!-- WED AUGUST 5
+	per Eric's help, Alex 
+	finally found a way
+	to commandeer an ICO file 
+	and make ALEX's own 
+	Favicon, complete 
+	with ICO extension -->
+	
+	<!-- BUT WAIT... Alex 
+	then discovered Alex 
+	could take an image 
+	file and convert it in 
+	the Mac Preview as a 
+	MICROSOFT ICON and then 
+	attach an ICO extension 
+	to that... and it works 
+	exclamation point... -->
+	<link rel="shortcut icon"  href="pictures/favicon.ico">
+	
+	<!-- Part 2 #4 -->
+	<meta name="description" content="my Module 2 project that is a bit of a biography about me">
+	<meta name="keywords" content="Module 2 project, Alex, biographic tidbits">
+	
+	<!-- ALEX APPROPRIATES THIS RESONSIVE LINK AND SCRIPT FROM EX 8-->
+	<!-- SLICKNAV CSS ALSO HAD TO BE PUT INTO THE CSS FOLDER DUH -->
+	<link rel="stylesheet" href="css/slicknav.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+        $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+	});
+	</script>
+	
+</head>
+<body>
+<!-- (this is from the template)
+	<script src="content/main.js" type="text/javascript"></script>
+-->	
+<!-- per Get Started, #3 -->
+	<header>
+	
+		<!-- Part 1 #6, no. 10-image -->
+		<img src="pictures/AlexLogo.jpg" alt="Alex spinning 500 foot wind turbine logo" height="80">
+		<!-- per Get Started, #5 -->
+		<h2>All About Alex</h2>
+		<h3><em>(...more or less...)</em></h3>
+		
+		<!-- comments -->
+		<!-- comments -->		
+		<!-- comments -->
+		<!-- comments -->
+		
+			
+	
+	</header>
+		<!-- FOR MOD 3 PROJECT ADD MOBILE MENU ID -->
+		
+		<nav id="mobile_menu"></nav>
+			<!-- Part 2 #9, nav element, 
+			which I appropriated from 
+			Ex 7-1 -->
+	
+	<!-- per Part 3 #7 adding class and ID selectors  -->
+		<nav id="nav_menu">
+    	<ul>
+        	<li><a href="pictures/home.jpg" class="current">Home</a></li>
+        	<li><a href="pictures/flowers.jpg">flowers!</a></li>
+        	<li><a href="pictures/Schmetterlinge.jpg">Schmetterlinge</a></li>
+        	<li><a href="pictures/west.jpg">West</a></li>
+        	<li><a href="aboutus.html">Hidden!</a>
+            	<ul>
+                	<li><a href="#">Top Drawer</a></li>
+                	<li><a href="#">Sock Drawer</a></li>
+                	<li><a href="#" class="millions">$$$Millions!!!</a></li>
+                	<li><a href="#">Bottom Drawer</a></li>
+            	</ul>
+        	</li>
+    	</ul>
+	</nav>
+	<main>
+	<!-- Part 2 #9, add a section -->
+		<section>
+	<!-- Part 2 #5... so far, this all looks good...  -->
+	
+	<!-- p. 91, SEO says the h tags are meant to show structural heirarchy  -->
+			<h1><em>Hi from <span class="shadow">Alex</span>!</em></h1>
+		
+		<!-- Part 2 #9, add an article -->
+		<article>
+		<h2>-here's some possibly interesting things about me...</h2>
+		
+		<!-- per Get Started, #6 -->
+		<!--
+		<img src="pictures/MEnANDY.jpg" alt="Alex with Andy Worhal sculpture" height="375">
+		-->
+		<!-- per Part 2 #15 b- I put in a height att -->
+		
+		<!-- AUGUST 7 ERIC ENCOURAGED ME TO GIVE 
+		THIS FIGURE AND CAPTION A SHOT FOR THE MODULE 
+		3 PROJECT -->
+				<h3>-this is me with Andy Warhol's soup can in Fort Collins, Colorado</h3>
+				
+			
+				<!-- THIS finally WORKS mostly at 
+				img width at 445 px...
+				thanks to Saura for leading me to that 
+				discovery -->
+		<figure>
+			<picture>
+				<img src="pictures/MEnANDY.jpg" alt="Alex with Andy Worhal sculpture" >
+	<!--
+	<img src="pictures/Saura.png" alt="Alex's picture of a sauropod skeleton at O'Hare" >
+	-->
+	<!--
+	 height="250"  
+	-->
+	<!-- FIXED DIMENSIONS HAVE TO COME OFF FOF RWD -->
+			</picture>
+			<figcaption class="tooltip">Alex &amp; Andy Warhol
+				<span class="tooltiptext"> 
+				Andy Warhol painted a lot of soup cans, among other things...</span>
+			</figcaption>
+	<!--
+	<figcaption>Saura not of Carrara</figcaption>
+	-->
+	</figure>	
+			
+					
+		
+
+		<!-- for RWD  ALEX tries the img 
+		without the height attribute AS 
+		WAS DONE IN Ex 8 THIS KEEPS THE 
+		IMAGE PROPORTIONALLY CORRECT AS 
+		THE PAGE TRANSITS TO AND FROM 
+		MOBILE MODE -->
+		
+		<!-- this SOURCE TYPE only
+		put a WRENCH IN TDHE WORKS so I 
+		took it out...
+		<source type="image/webp" srcset="pictures/MEnANDY.webp">
+		...oh, yeah... you have to have a
+		web page for it. -->
+		
+					<!-- width="250"
+					FIXED DIMENSIONS HAVE TO 
+					COME OFF FOR RWD OTHERWISE IMG
+					DISTORTS -->
+	<!--	
+	<figure>
+		<picture>
+			<img src="pictures/MEnANDY.jpg" alt="Alex with Andy Worhal sculpture" >
+
+		</picture>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br> - THIS SORT OF DEFEATS THE PURPOSE OF HAVING A FIGURE CAPTION DOESN'T IT... 
+				<br>
+				<br>  AND THIS LOOKS TERRIBLE IN MOBILE MODE 
+				<br>
+				<br>
+				<br>
+				<br>
+				<figcaption class="tooltip">Alex &amp; Andy Warhol
+				<span class="tooltiptext"> 
+				Andy Warhol painted a lot of soup cans, among other things...</span>
+				</figcaption>
+			</figure>
+			-->
+			
+			
+				<!-- NOT EVEN MOVING THIS TO THE TOP 
+		  		CHANGES THE FIGCAPTION LOCATION -->	
+		  		
+		  			<!-- REMOVING PICTURE TAGS ALSO DOESN'T SOLVE 
+			  		THE PROBLEM OF TEXT ORIENTATION TO PICTURE -->
+			<!--  		
+			<figure>
+			
+		  		<figcaption class="tooltip">Alex &amp; SAMPSONIZED
+				<span class="tooltiptext"> 
+				Andy Warhol painted a lot of soup cans, among other things...</span>
+				</figcaption>
+					<img src="pictures/MEnANDY_sampsonized.jpg" alt="Alex with Andy Worhal sculpture">
+			</figure>
+			-->
+			
+			<!--
+			<p>-this is me with Andy Warhol's soup can in Fort Collins, Colorado</p>
+			-->
+		<!--	
+		<h3>-this is me with Andy Warhol's soup can in Fort Collins, Colorado</h3>
+		-->
+		
+		<!--
+			<figure>
+				<picture>
+					<img src="pictures/Dino_sampsonized.jpg" alt="Dino squished!">
+				</picture>
+				<figcaption>samsonized dino</figcaption>
+			</figure>
+		-->
+	<!--	
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+-->
+
+		
+		<!--  per Part 2 #7, an attempt to make this 
+		tooltip business work- I'm not sure how I'm 
+		going to make this work as we haven't done 
+		anything like this yet... (per model, fig 3-7, 
+		p. 99) -->
+		
+		<!-- GRRRR... THIS IS THE BEST AS I CAN FIGURE 
+		OUT HOW TO DO THIS... I DON'T HAVE ANY IDEA HOW 
+		ELSE TO MAKE THIS WORK!!! -->
+		
+<!--  THIS IS THE ORIGINAL
+	JUST IN CASE... 
+	
+		<p class="first field">Alex &amp; Andy Warhol
+		<input type="text" name="andy" id="andy"
+			title="Andy Warhol painted a lot of soup cans, among other things..."><br>(Hover over the box next to Andy's name to see what Andy did!)</p>
+			
+			-->
+			
+			<!-- THIS REMAKE 
+			IS APPROPRIATED 
+			FROM W3 TOOTIP 
+			THAT ERIC 
+			FOUND -->
+			
+			<!-- ALMOST BUT 
+			STILL NOT QUITE...
+			I ALSO TRIED
+			DIV awa P TAGS -->
+			
+			<!--
+			<br>
+					<p class="tooltip">Alex &amp; Andy Warhol
+		<span class="tooltiptext"> 
+			Andy Warhol painted a lot of soup cans, among other things...</span></p>
+			-->	
+			
+			<!--
+			 <h3>(Hover over Andy's name to see what Andy did!)</h3> 
+			-->
+			
+			<!-- ******* -->
+			
+			<!-- I ALMOST
+			GOT THIS
+			FIGURED OUT...
+			... HOW CAN I
+			FIX THIS Q MARK -->
+			
+			<!--
+			<p>Alex &amp;</p>
+			<p class="tooltip">Andy Warhol
+			<span class="tooltiptext">Andy Warhol painted a lot of soup cans, among other things...</span></p>
+			-->
+			
+			<h4>(Hover over Andy's name in the caption above to see what Andy did!)</h4>
+		
+		<!-- this doesn't work either	
+		<input type="text" name="andy" id="andy"
+			title="">
+		-->
+		
+		
+		<!-- per Part 1 #6, nos. 5 and 9 -sup and span -->
+		
+		<!-- per Part 2 #11, this span
+		element is here only for separating 
+		part of the code for special reason, 
+		as Murach does it in the Town Hall 
+		exercises... it is not intended for
+		page structuring -->
+		<h3>--my last name is <span class="shadow">M<sup>c</sup>Hattie</span></h3>
+		<h4> --elevating the C in Mc surnames seems to be some sort of an ethnic tradition-- my name is supposedly Scottish, and is somewhat common in the UK and Nova Scotia</h4>
+	
+		 <h5>however, I'm originally from Wyoming</h5>
+		
+		<!-- Part 1 #6, no. 8-break -->
+		<br>
+		
+		
+		
+		<!--  MANY, MANY trials to get figcap to work
+		correctly...
+			<figure>
+				<picture>
+					<img src="pictures/sampson_dinosaur_copy.jpg" alt="Dino squished!">
+				</picture>
+				<figcaption>sampson's dino test</figcaption>
+			</figure>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		-->
+		
+		<h6>-yeah, I dig poetry...</h6>
+		
+		<!-- Part 1 #6, no.2 blockquote,  and Part 2 #8 -two lang attributes -->
+		<p>For a blockquote, here's a haiku by Matsuo Bashō...</p>
+		<br>		
+		<blockquote lang="ja"><strong>荒海や佐渡によこたふ天の河</strong></blockquote>
+		<br>
+		<blockquote>&ldquo;the rough sea<br>stretching out towards Sado<br>the Milky Way&rdquo;</blockquote>
+		<br>
+		<p>...and a stanza from Konstantin Balmont's <em>Starface</em>...</p>
+		<br>
+		<blockquote lang="ru"><strong>Лицо его было как Солнце — в тот час когда Солнце в зените,<br>
+		Глаза его были как звёзды — пред тем как сорваться с Небес,<br>
+		И краски из радуг служили как ткани, узоры, и нити,<br>
+		Для пышных его одеяний, в которых он снова воскрес.</strong></blockquote>
+		<br>
+		<blockquote>&ldquo;His face was like the Sun - at that hour when the Sun is at its zenith,<br>
+		His eyes were like stars - before falling from Heaven,<br>
+		And rainbow paints served as fabrics, patterns, and threads,<br>
+		For his magnificent robes, in which he was resurrected again.&rdquo;</blockquote>
+		<br>
+		<br>
+				
+		<p>...and for a quote, here's a snippet from Groucho Marx's autobiography, where he proclaimed-
+		<br>
+		<br>
+		<!-- Part 1 #6, no. 3-quote -->
+		<q>Although it is generally known, I think it's about time to announce that I was born at a very early age.</q></p>
+		<br>
+		
+		<!-- Part 1 #6, no. 4-abbreviation -->
+		<p>I have a <abbr>DMA</abbr> from <abbr>UIUC</abbr></p>
+		<!-- Part 1 #6, no. 7-small -->
+		<p><small>...and I wrote about the Higgs boson, the Calabi Yau manifold and some other small things in my doctoral thesis!</small></p>
+		</article>
+		<br>
+		
+		
+		<!-- Part 1 #6, no. 11-unordered list -->	
+				
+		<!-- PART 2 #14 unordered list, 3 elements -->
+			<h2>Some of my favorite critters</h2>
+			
+			<ul>
+				<li>fireflies</li>
+				<li>chorus frogs</li>
+				<li>possums</li>
+			</ul>
+			
+			
+			<!-- Part 1 #6, no. 12-ordered list -->
+			<!-- PART 2 #13 ordered list, 3 elements -->
+			<h2>My favorite composers at the moment</h2>
+				
+			<ol>
+				<li>Nino Rota (Fellini scores)</li>
+				<li>Skip James</li>
+				<li>Hans Werner Henze (especially his bass concerto)</li>
+			</ol>
+			<br>
+			
+			<!-- Part 1 #6, no. 6-code -->
+			<p><code>I'm enjoying coding in this HTML5 CSS3 class!</code></p>
+			<br>
+
+			
+		<!-- OK I'M TRYING FIG CAPTION
+		DOWN HERE IN SECTION -->	
+		<figure>
+		<picture>
+		<img src="pictures/MYSELFnKCPA.jpg" alt="Alex at KCPA photo" >
+		<!-- width="375" -->
+		</picture>
+			<figcaption class="tooltip">Alex &amp; Krannert Center for the Performing Arts
+				<span class="tooltiptext">I performed and taught there a <em>lot</em>!</span>
+				</figcaption>
+		<!--
+		<figcaption>me and kcpa</figcaption>
+		-->
+		</figure>
+		
+		<!-- Part 1 #6, no. 1-address -->
+		<h3>-here's a picture of Myself at KCPA-- one of my old stomping grounds--<br> which is located at:</h3>
+		
+		<address>500 South Goodwin Avenue in Urbana</address>
+		<h3>...and at this link right <a href="https://krannertcenter.com/">HERE!</a></h3>
+		<!-- Although it was ORIGINALLY BLUE, I CANNOT FIGURE OUT WHY THIS LINK WILL NOT RESET BACK TO BLUE !!!!! -->
+
+		<!-- this address element cannot be a child of an h tag element, says w3 validator.
+		<address><a href="https://krannertcenter.com/">HERE!</a></address>
+		-->
+		
+		<!-- THIS LINK was origninally BLUE...
+		I saw it, but now it doesn't go back that way... IS 
+		IT BECAUSE IT'S IN AN ADDRESS ELEMENT? ...NO, it's
+		fine. It's blue when it never was clicked on before.
+		-->
+		<!--
+		<a href="https://www.krannertcenter.com/">HERE!</a>
+		-->
+	
+		<!-- NO, THE SAME THING HAPPENS... -->
+		<!-- oy... -->
+		
+		<!-- per Part 2 #12, above is an anchor element with an href attribute ...that one being an ABSOLUTE URL -->	
+		
+		<br>
+		
+	
+		<!-- per Part 2 #12, below is an anchor element with an href attribute ...that one being a RELATIVE  URL -->	
+		<h3>... and click <a href="pictures/AlexSpinsTurbine.jpg">HERE</a> to see a picture of me spinning a blade on a wind turbine in Iowa.  That blade is about 180 feet long and 300 feet in the air...</h3>
+					
+		<!-- THESE HAVE TO GO FROM BLUE TO PURPLE !!!!! -->
+		<!-- ********************************* -->
+		
+		<!-- comments -->
+		<!-- comments -->
+
+
+	<!-- Woo-hoo... so far, per Part 1, this doc is clean! (per both html validators) -->
+	<!-- Part 2 #6 character entities  -->
+	<figure>
+	<picture>
+	<img src="pictures/BOZEMANnI.jpg" alt="Alex with Bozeman statue">
+		</picture>
+		<figcaption class="tooltip">John &amp; I chumming in a sculpture park<span class="tooltiptext">everybody else got one of these, so I figured John should have one, too...</span>
+		</figcaption>
+		<!--
+		<figcaption>me and kcpa</figcaption>
+		-->
+		</figure>
+	
+	
+	<!-- ALEX scaled down these pics to match 
+	Sampson and dinofriend width in Ch 8 RWD -->
+	
+<!-- width="250" -->
+<!-- as above, ALEX parked fixed dimensions for 
+the sake of RWD as was done in Ch 8 -->
+	
+	<h3>-John Bozeman &amp; I in Longmont, CO at about 72&deg;&plusmn;... </h3>
+	
+	<br>
+
+	<!-- Part 2 #15, here's a PNG image 
+	a. with alt attribute
+	b. with height or width for all of these images
+	c. AND THESE ARE ALL MY IMAGES... 
+	NONE FROM INTERNET !!!!! -->
+	<figure>
+		<picture>
+			<img src="pictures/Saura.png" alt="Alex's picture of a sauropod skeleton at O'Hare" >
+	<!-- height="250"  -->
+	<!-- FIXED DIMENSIONS HAVE TO COME OFF FOF RWD -->
+		</picture>
+		<figcaption class="tooltip">Saura (<em>not</em> from Carrara)
+			<span class="tooltiptext">Thanks to Saura for showing me how to do these tooltips!!!</span>
+		</figcaption>
+	<!--
+	<figcaption>Saura not of Carrara</figcaption>
+	-->
+	</figure>
+	
+	<h3>...and this is my PNG of Saura peeking out a skylight window at O'Hare Concourse B. She was booted out of the Field Museum to make way for Sue...</h3>
+	
+		</section>
+		<!-- THIS ALL WENT RED WHEN I PUT
+	IN THIS END SECTION TAG- WHY??? adding aside remedied it... -->
+		
+		
+	<!-- per Part 2 #10, add an aside -->		
+		<aside>
+					<h2>More Friends!</h2>
+					<!-- ALEX WILL REDO ID FROM "speakers" to 
+					"littlePictures" -->	
+		<div id="speakers">	
+			<h3>me and frog<br><a href="pictures/frog80.jpg">frog</a></h3>
+				<img src="pictures/frog80.jpg" alt="frog">
+				
+			<h3>me and snake<br><a href="pictures/snake80.jpg">snake</a></h3>
+				<img src="pictures/snake80.jpg" alt="snake"> 
+			
+				<h3>me and Dali Bass<br><a href="pictures/snake80.jpg">bass</a></h3>
+				<img src="pictures/DaliBass80.jpg" alt="bass"> 
+				
+				<h3>Deano<br><a href="pictures/Deano80.jpg">Deano</a></h3>
+				<img src="pictures/Deano80.jpg" alt="Deano"> 			
+			</div>
+		</aside>
+	</main>
+	<footer>
+		<p><em>&copy; by me!&trade;&reg;&cent;, and so on...</em></p>
+		<!-- OK FROM PART 2 #16!!! -->
+	</footer>
+</body>
+</html>
